@@ -1,0 +1,493 @@
+/* Main font, color scheme, positioning and full page animation */
+body {
+  font-family: Roboto;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: #f1faee;
+  background-color: #1d3557;
+  animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Main rules for links to enhance navigation */
+
+a:focus,
+button:focus {
+  outline-offset: 2px color white;
+}
+
+a:visited {
+  color: #f1faee;
+}
+
+a:link {
+  color: #f1faee;
+  text-decoration: none;
+}
+a:hover {
+  color: #457b9d;
+}
+
+a:active {
+  color: #f1faee;
+}
+
+/* Header, nav and nav menu 
+positioning and styling */
+
+header {
+  height: 8vh;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 0.1rem solid #f1faee;
+}
+
+.header-home {
+  font-weight: 500;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.header-nav-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 1rem;
+}
+.header-link {
+  color: #64ffda;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.header-link:hover {
+  color: #ccd6f6;
+}
+
+nav {
+  display: flex;
+  font-size: 1rem;
+}
+
+/* Off screen menu transitioning from right to left, centered links in menu
+
+styling, positioning and transition */
+
+.off-screen-menu {
+  background-color: #457b9d;
+  height: 100vh;
+  width: 80vw;
+  top: 0;
+  left: 20vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+  font-size: 1rem;
+  transition: transform 0.3s ease;
+  position: fixed;
+  transform: translateX(100%);
+  z-index: 1;
+  color: #f1faee;
+}
+
+.off-screen-menu a:hover {
+  color: #1d3557;
+}
+
+.off-screen-menu.active {
+  transform: translateX(0);
+}
+
+/* Landing page headings, paragraphs, buttons and links
+positioning, sizing and styling. */
+
+.about-me-container {
+  width: 90vw;
+  height: 90vh;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+}
+
+.about-me {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 2vh;
+}
+
+.about-me-para {
+  font-size: 1.4rem;
+  line-height: 1.4;
+}
+
+.about-me-h3 {
+  font-weight: 500;
+  line-height: 0;
+  font-size: 2rem;
+}
+
+.name-h1 {
+  font-size: 1.8rem;
+  line-height: 0;
+}
+
+.title-h2 {
+  line-height: 0;
+}
+
+.change-color-text-span {
+  color: #a8dadc;
+  transition: color 3s ease, opacity 3s ease;
+  border-bottom: 0.15rem solid #a8dadc;
+}
+
+.button-container {
+  display: flex;
+  gap: 1rem;
+  margin-top: 3vh;
+  align-items: center;
+  padding-top: 10px;
+}
+
+/* Button styling, positioning and transitioning color + background color */
+
+.button-download-resume {
+  width: 7rem;
+  height: 2.5rem;
+  border-radius: 12px;
+  border-color: #f1faee;
+  color: #f1faee;
+  border: solid 2px;
+  font-size: 1.1rem;
+  text-align: center;
+  line-height: 2.5rem;
+  transition: background-color 1s ease-in-out 0.25s, color 1s ease-out 0.25s,
+    border 1s ease-out 0.25s;
+}
+
+.button-download-resume:hover {
+  background-color: #f1faee;
+  color: #1d3557;
+}
+
+.devicon-linkedin-plain,
+.devicon-github-original {
+  font-size: 2rem;
+}
+
+.iconify {
+  font-size: 1.4rem;
+}
+.devicon-github-original-wordmark {
+  font-size: 1.4rem;
+}
+
+/* Skills section heading and images
+styling, positioning and sizing */
+
+.skills-h2 {
+  font-size: 2rem;
+}
+
+.skills {
+  height: 200px;
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(1, 7rem);
+  margin-top: 1rem;
+}
+
+/* Featured projects containers, headings, paragraphs and images/video
+styling, positioning and sizing  */
+
+.my-projects-h2 {
+  font-weight: 500;
+  font-size: 2rem;
+  margin-bottom: 5vh;
+  text-align: center;
+}
+
+.project-container {
+  width: 90vw;
+  height: 70vh;
+  margin-bottom: 30vh;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+}
+
+.project-category {
+  line-height: 1.5;
+  font-size: 1rem;
+}
+
+.project-title {
+  line-height: 1;
+  font-size: 1.5rem;
+}
+
+.about-para-project {
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.project-h2 {
+  line-height: 1;
+}
+
+.project-image-sneakercuisine video,
+.rps-image,
+.dashboard-image {
+  width: 90vw;
+}
+
+/* Footer for index.html/home
+ styling, positioning and sizing  */
+
+.footer-container {
+  left: 0;
+  bottom: 0;
+  width: 90vw;
+  color: #f1faee;
+  text-align: center;
+  border-top: 0.1rem solid #f1faee;
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+  padding-top: 10px;
+  gap: 1rem;
+}
+
+/* Fixed footer for all other sites
+styling, positioning and sizing */
+
+.footer-container-fixed {
+  width: 90vw;
+  color: #f1faee;
+  text-align: center;
+  border-top: 0.1rem solid #f1faee;
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+  padding-top: 10px;
+  position: fixed;
+  bottom: 0;
+  left: 5%;
+  width: 90vw;
+  gap: 1rem;
+}
+
+.copyright {
+  font-weight: 500;
+}
+
+/* CSS for blog.html
+styling, positioning and sizing */
+
+.date {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.blog-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 90vw;
+}
+
+.blog-title {
+  font-size: 1.4rem;
+  text-decoration: underline;
+}
+
+/* blogpost.html 
+CSS styling, positioning and sizing */
+
+.blogpost-title {
+  text-decoration: none;
+  font-size: 1.4rem;
+}
+
+.content {
+  width: 90vw;
+  margin-bottom: 10vh;
+}
+
+/* Contact.html CSS
+styling, positioning and sizing */
+
+.container form {
+  width: 70vw;
+  height: 40vh;
+  padding: 2rem;
+  background-color: #1d3557;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  margin-top: 5vh;
+}
+
+.input-group {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  margin: 1rem;
+}
+.input-group label {
+  flex-basis: 30%;
+}
+.input-group input,
+.input-group textarea {
+  flex-basis: 68%;
+  background: transparent;
+  border: 0;
+  outline: 0;
+  padding: 1rem 0;
+  border-bottom: 1px solid #f1faee;
+  color: #f1faee;
+  font-size: 1rem;
+}
+
+form button {
+  background-color: #457b9d;
+  color: #f1faee;
+  border-radius: 4px;
+  border: none;
+  padding: 1rem 3rem;
+  cursor: pointer;
+  display: block;
+  margin: 2rem auto 1rem;
+}
+
+.successful-submit {
+  background-color: #457b9d;
+  height: 100vh;
+  width: 90vw;
+  top: 0;
+  left: 10vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+  font-size: 1rem;
+  transition: transform 0.3s ease;
+  position: fixed;
+  transform: translateX(100%);
+  z-index: 1;
+  color: #f1faee;
+}
+
+.successful-submit.active {
+  transform: translateX(0);
+}
+
+/* Media queries */
+
+/* iPhone 12 Pro */
+@media (min-width: 390px) {
+}
+
+/* Macbook Pro 14" */
+@media (min-width: 1386px) {
+  .header-home {
+    font-size: 1.5rem;
+  }
+
+  .off-screen-menu {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .off-screen-menu a {
+    font-size: 2rem;
+  }
+
+  .about-me-para {
+    max-width: 50%;
+  }
+  .skills-container {
+    display: grid;
+    grid-template-columns: repeat(4, 9rem);
+    gap: 6rem;
+    margin-bottom: 35vh;
+  }
+
+  .work-h2 {
+    text-align: center;
+  }
+  .project-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 90vw;
+    gap: 2rem;
+  }
+
+  .project-container video {
+    width: 40%;
+  }
+
+  .project-content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .rps-image,
+  .dashboard-image {
+    width: 40%;
+  }
+
+  .content {
+    width: 50%;
+    margin-bottom: 10vh;
+  }
+
+  .container form {
+    width: 50vw;
+  }
+
+  .input-group {
+    justify-content: center;
+    align-items: center;
+  }
+  .input-group label {
+    flex-basis: 10%;
+  }
+
+  .input-group input,
+  .input-group textarea {
+    flex-basis: 40%;
+  }
+}
+
+/* Instead, just use: */
+@media (max-width: 768px) {
+  .off-screen-menu {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+}
